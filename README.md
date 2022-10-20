@@ -132,12 +132,12 @@ See [reparameterization.ipynb](tools/reparameterization.ipynb)
 
 On video:
 ``` shell
-python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source yourvideo.mp4
+python detect.py --weights trained_weights/yolov7.pt --conf 0.25 --img-size 640 --source yourvideo.mp4
 ```
 
 On image:
 ``` shell
-python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/images/horses.jpg
+python detect.py --weights trained_weights/yolov7.pt --conf 0.25 --img-size 640 --source inference/images/horses.jpg
 ```
 
 <div align="center">
@@ -153,9 +153,21 @@ python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inferen
 
 **Pytorch to ONNX with NMS (and inference)** <a href="https://colab.research.google.com/github/WongKinYiu/yolov7/blob/main/tools/YOLOv7onnx.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 ```shell
-python export.py --weights yolov7-tiny.pt --grid --end2end --simplify \
+python export.py --weights trained_weights/yolov7.pt --grid --end2end --simplify \
         --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 640 640 --max-wh 640
 ```
+
+```shell
+python export.py --weights trained_weights/yolov7-mask.pt --grid --end2end --simplify \
+        --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 640 640 --max-wh 640
+```
+
+```shell
+python export.py --weights trained_weights/yolov7.pt --grid --end2end --simplify \
+        --topk-all 100 --iou-thres 0.65 --conf-thres 0.35 --img-size 640 640 --max-wh 640
+```
+
+
 
 **Pytorch to TensorRT with NMS (and inference)** <a href="https://colab.research.google.com/github/WongKinYiu/yolov7/blob/main/tools/YOLOv7trt.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 

@@ -1,0 +1,4 @@
+Requirement already satisfied: onnx in /home/pjvazquez/anaconda3/envs/trackintst/lib/python3.9/site-packages (1.12.0)
+Requirement already satisfied: typing-extensions>=3.6.2.1 in /home/pjvazquez/anaconda3/envs/trackintst/lib/python3.9/site-packages (from onnx) (4.3.0)
+Requirement already satisfied: protobuf<=3.20.1,>=3.12.2 in /home/pjvazquez/anaconda3/envs/trackintst/lib/python3.9/site-packages (from onnx) (3.20.1)
+Requirement already satisfied: numpy>=1.16.6 in /home/pjvazquez/anaconda3/envs/trackintst/lib/python3.9/site-packages (from onnx) (1.23.1)
